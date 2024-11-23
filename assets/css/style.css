@@ -17021,7 +17021,7 @@ header .rts-btn {
 .progress-wrap svg {
   color: var(--color-primary);
   border-radius: 50%;
-  background: transparent;
+  background: #fff;
 }
 
 .progress-wrap svg.progress-circle path {
@@ -19865,6 +19865,9 @@ header .rts-btn {
 
   .btn-registro {
     display: block;
+  }
+  .berre{
+    display: block  ;
   }
 }
 

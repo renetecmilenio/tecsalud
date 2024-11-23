@@ -16,10 +16,6 @@
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .berre {
-            display: none;
-        }
-
         .subhead {
             font-size: 4rem;
             margin-left: 14px;
@@ -30,7 +26,8 @@
         @media only screen and (max-width: 991px) {
 
             .about-content-wrapper-right,
-            .title-wrapper-left,
+            /* .title-wrapper-left, */
+            .service-area,
             .why-choose-area-wrapper {
                 padding: 0 15px;
                 margin-bottom: 5rem;
@@ -38,8 +35,24 @@
 
             dotlottie-player {
                 padding: 0 15px;
+                margin: auto;
+
             }
 
+        }
+
+        @media only screen and (min-width: 768px) {
+            dotlottie-player.movil {
+                display: none;
+
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            dotlottie-player.desktop {
+                display: none;
+
+            }
         }
 
         @media only screen and (max-width: 575px) {
@@ -51,17 +64,16 @@
             div#lugar {
                 background-color: white !important;
             }
-        }
-
-        @media only screen and (min-width: 479px) {
 
             .berre {
-                display: block;
+                display: none;
             }
         }
 
         @media only screen and (max-width: 479px) {
-
+            .berre {
+                display: none;
+            }
 
             .subhead {
                 font-size: 3rem;
@@ -99,6 +111,11 @@
             margin-top: 0;
         }
 
+        button.btn-primary.btn-send {
+            padding: 15px;
+            border-radius: 100px;
+        }
+
         /* .lugar {
             font: 2em sans-serif;
             line-height: 2rem;
@@ -122,7 +139,7 @@
                             <div class="nav-area">
                                 <ul class="">
                                     <li class="main-nav"><a href="#lugar">Lugar</a></li>
-                                    <li class="main-nav"><a href="#itinerario">Itinerario</a></li>
+                                    <li class="main-nav"><a href="#agenda">Agenda</a></li>
                                     <li class="main-nav"><a href="#ponentes">Ponentes</a></li>
                                 </ul>
                             </div>
@@ -157,7 +174,7 @@
                         <div class="banner-content-area">
                             <div class="pre-title wow fadeInUp" data-wow-delay=".0s" data-wow-duration=".8s">
                                 <img style="width: 45px;" src="assets/images/banner/icon/08.svg" alt="icons">
-                                <span class="subhead">2o Summit</span>
+                                <span class="subhead">2<sup style="font-size: 2.5rem;">o</sup> Summit</span>
                             </div>
                             <h1 class="title wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Cancer de
                                 Pulmón:</h1>
@@ -203,7 +220,8 @@
                         <ul class="disc wow fadeInUp lugar" data-wow-delay=".6s" data-wow-duration=".8s"
                             style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">
                             <li> Formato Híbrido. </li>
-                            <li> <strong>Lugar:</strong> Auditorio B (Planta Baja) Hospital Zambrano Hellion
+                            <li> <strong>Lugar:</strong> Auditorio B (Planta Baja) <br class="berre"> Hospital Zambrano
+                                Hellion
                             </li>
                             <li> Evento sin costo.</li>
                         </ul>
@@ -215,8 +233,8 @@
 
                         <div class="button-wrapper wow fadeInUp" data-wow-delay=".8s" data-wow-duration=".8s"
                             style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.8s; animation-name: fadeInUp;">
-                            <a href="#itinerario" class="rts-btn btn-primary">
-                                VER ITINERARIO <img src="assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
+                            <a href="#agenda" class="rts-btn btn-primary">
+                                VER AGENDA <img src="assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
                             <!-- <div class="signature">
                                 <img class="one" src="assets/images/about/01.png" alt="about">
                                 <img class="sign" src="assets/images/about/02.png" alt="about">
@@ -240,11 +258,15 @@
     <!-- rs about area end -->
 
     <!-- srvice area start -->
-    <div class="service-area position-relative rts-section-gap2">
+    <div class="service-area position-relative rts-section-gap">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-9 col-md-8">
                     <div class="title-wrapper-left">
+                        <dotlottie-player class="movil"
+                            src="https://lottie.host/2b57763e-f372-49dc-9d19-376d745f328c/IXLgb1hjti.lottie"
+                            background="transparent" speed="1" style="width: 300px; height: 300px" loop
+                            autoplay></dotlottie-player>
                         <!-- <span class="pre wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">Our Services</span> -->
                         <h2 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
                             Te esperamos este 28 de noviembre en el
@@ -265,8 +287,10 @@
                                 Lugar: Auditorio B del Hospital Zambrano Hellion <br> <br>
                                 Entrada sin costo. ¡Separa tu lugar! <br> <br>
                             </strong>
-                            ¡No pierdas la oportunidad de profundizar en estos temas clave y contribuir al avance en la
-                            atención del cáncer pulmonar!
+                            <span style="color: var(--color-primary);">¡No pierdas la oportunidad de profundizar en
+                                estos temas clave y contribuir al avance
+                                en la
+                                atención del cáncer pulmonar!</span>
 
                         <div class="single-testimonials-style">
                             <div class="quots">
@@ -284,7 +308,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s">
-                    <dotlottie-player src="https://lottie.host/2b57763e-f372-49dc-9d19-376d745f328c/IXLgb1hjti.lottie"
+                    <dotlottie-player class="desktop"
+                        src="https://lottie.host/2b57763e-f372-49dc-9d19-376d745f328c/IXLgb1hjti.lottie"
                         background="transparent" speed="1" style="width: 300px; height: 300px" loop
                         autoplay></dotlottie-player>
                 </div>
@@ -298,7 +323,7 @@
 
 
     <!-- why choose us section start -->
-    <div id="itinerario" class="why-choose-area-wrapper   rts-section-gapBottom ">
+    <div id="agenda" class="why-choose-area-wrapper   rts-section-gapBottom ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 shedule-1 table-responsive">
@@ -654,7 +679,7 @@
 
                                 </h6>
                             </a>
-                            <p>Cirujano torácico / TecSalud / ISSEMYN
+                            <p>Cirujano torácico / TecSalud
 
 
                             </p>
@@ -908,8 +933,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="rts-btn btn-primary">Registrarse <img style="transform: rotate(45deg);"
-                                    src="assets/images/banner/icons/arrow--up-right.svg" alt=""></a>
+                            <button href="#" class=" btn-primary btn-send">REGISTRAR MI ASISTENCIA <img
+                                    style="transform: rotate(45deg);"
+                                    src="assets/images/banner/icons/arrow--up-right.svg" alt=""></button>
                         </form>
                     </div>
                 </div>
@@ -971,10 +997,10 @@
             <nav class="nav-main mainmenu-nav mt--30">
                 <ul class="mainmenu metismenu" id="mobile-menu-active">
 
-                    <li><a href="#lugar" class="main">Lugar</a></li>
-                    <li><a href="#itinerario" class="main">Itinerario</a></li>
-                    <li><a href="#ponentes" class="main">Ponentes</a></li>
-                    <li><a href="#registro" class="rts-btn btn-primary">Registro</a></li>
+                    <li><a href="#lugar" class="main lugar">Lugar</a></li>
+                    <li><a href="#agenda" class="main agenda">Agenda</a></li>
+                    <li><a href="#ponentes" class="main ponentes">Ponentes</a></li>
+                    <li><a href="#registro" class="rts-btn btn-primary registro">Registro</a></li>
                 </ul>
             </nav>
 
@@ -1013,6 +1039,27 @@
     <script src="assets/js/main.js"></script>
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Escucha el evento click solo en los enlaces con la clase específica
+            $('a[href^="#"]').on('click', function (event) {
+                event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+
+                var target = $($(this).attr('href')); // Obtiene el elemento de destino
+
+                if (target.length) { // Verifica si el elemento existe
+                    $('html, body').animate(
+                        {
+                            scrollTop: target.offset().top, // Calcula la posición del destino
+                        },
+                        800 // Duración de la animación (ajustable)
+                    );
+                }
+            });
+        });
+
+    </script>
 
 </body>
 

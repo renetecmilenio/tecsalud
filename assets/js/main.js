@@ -562,6 +562,22 @@
             $("#side-bar").removeClass("show");
             $("#anywhere-home").removeClass("bgshow");
           });
+          $(document).on('click', '.main.lugar', function () {
+            $("#side-bar").removeClass("show");
+            $("#anywhere-home").removeClass("bgshow");
+          });
+          $(document).on('click', '.main.agenda', function () {
+            $("#side-bar").removeClass("show");
+            $("#anywhere-home").removeClass("bgshow");
+          });
+          $(document).on('click', '.main.ponentes', function () {
+            $("#side-bar").removeClass("show");
+            $("#anywhere-home").removeClass("bgshow");
+          });
+          $(document).on('click', '.registro', function () {
+            $("#side-bar").removeClass("show");
+            $("#anywhere-home").removeClass("bgshow");
+          });
           $(document).on('click', '#anywhere-home', function () {
             $("#side-bar").removeClass("show");
             $("#anywhere-home").removeClass("bgshow");
